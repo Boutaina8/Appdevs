@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+<head>
+  <title>Mon App Flask</title>
+</head>
+<body>
+  <h1>Mon App Flask</h1>
+  <a href="{{ url_for('main.index') }}">Accueil</a> | 
+  <a href="{{ url_for('main.create') }}">Créer</a>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+  {% for article in articles %}
+    <li>
+      <strong>{{ article.title }}</strong>
+      <a href="{{ url_for('main.edit', id=article.id) }}">Modifier</a>
+      <a href="{{ url_for('main.delete', id=article.id) }}">Supprimer</a>
+    </li>
+  {% endfor %}
+</ul>
+{% endblock %}
